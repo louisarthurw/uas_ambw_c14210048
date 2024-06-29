@@ -72,6 +72,7 @@ class _EnterPinState extends State<EnterPin> {
                       );
                       print('created pin: ${pin}');
                     } else {
+                      FocusScope.of(context).unfocus();
                       ScaffoldMessenger.of(context).showSnackBar(
                         SnackBar(
                             content: Text('PIN harus terdiri dari 4 digit!')),
